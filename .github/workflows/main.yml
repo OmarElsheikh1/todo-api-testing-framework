@@ -1,6 +1,6 @@
 name: Run Rest Assured test cases
 
-on
+on:
   push:
       branches: ["master"]
 
