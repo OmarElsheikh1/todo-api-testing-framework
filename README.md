@@ -1,11 +1,11 @@
 # Todo API Testing Framework
 
-[![Java](https://img.shields.io/badge/Java-21-007396)](https://www.java.com/)
+[![Java](https://img.shields.io/badge/Java-21-007396)](https://docs.oracle.com/en/java/javase/21/)
 [![RestAssured](https://img.shields.io/badge/RestAssured-5.3.0-4bc51d)](https://rest-assured.io/)
 [![TestNG](https://img.shields.io/badge/TestNG-7.8.0-ff6a00)](https://testng.org/)
 [![Allure Report](https://img.shields.io/badge/Allure-Report-ff4e8a)](https://docs.qameta.io/allure/)
 
-A Java-based API testing framework for Todo application endpoints using RestAssured and TestNG, designed for clear, maintainable automated tests.
+A Java-based API testing framework for Todo app endpoints using RestAssured and TestNG. Built for clarity and maintainability.
 
 ---
 
@@ -38,7 +38,6 @@ A Java-based API testing framework for Todo application endpoints using RestAssu
 ## ⚙️ Project Structure
 
 ```text
-src/
 src/
 ├── main/java/com/qacart/todo/
 │   ├── apis/         # API client implementations (UserApi, TodoApi)
@@ -83,6 +82,7 @@ mvn test -Dtest=TodoTest   # Todo operations tests
 
 Generating Reports
 After tests run, generate and view the Allure report:
++ After running tests, generate and view the Allure report:
 ```bash
 allure serve target/allure-results
 ```
@@ -100,36 +100,23 @@ allure serve target/allure-results
 ---
 
 ## 🧩 Framework Components
-API Clients (apis/):
 
-Abstract API interactions with reusable methods
+- **API Clients (`apis/`)**  
+  Encapsulate HTTP methods (e.g., login, create todo) with authentication and response handling.
 
-Handle authentication and response parsing
+- **Models (`models/`)**  
+  POJOs with Jackson annotations and builder pattern for cleaner data setup.
 
-Models (models/):
+- **Test Utilities (`steps/`)**  
+  Generate test data and group actions into reusable workflows.
 
-POJOs with Jackson annotations
-
-Use builder pattern for data creation
-
-Test Utilities (steps/):
-
-Generate randomized data
-
-Combine test steps for reuse
-
-Config & Constants (base/, data/):
-
-Base request spec
-
-API route constants
-
-Error messages
+- **Configuration (`base/`, `data/`)**  
+  Includes base request specifications, API routes, and error messages.
 
 ---
 
 ## 🔄 CI/CD Pipeline
-> Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions
+The GitHub Actions workflow automatically runs your test suite on every push and pull request, and can generate Allure reports as artifacts.
 
 ![image alt](https://github.com/OmarElsheikh1/todo-api-testing-framework/blob/ffd110256aa762df6594a1615bb2081b1020d75a/images/deepseek_mermaid_20250703_23e877.png)
 Diagram showing the GitHub Actions workflow that runs automated tests and generates reports on every commit.
@@ -138,13 +125,13 @@ Diagram showing the GitHub Actions workflow that runs automated tests and genera
 
 ## 🛠️ Development Guide
 Adding New Tests
-Create a test class in testcases/
+1. Create a new test class in testcases/
 
-Use existing models and API clients
+2. Use existing models and API clients
 
-Generate test data via steps/ utilities
+3. Generate test data using steps/
 
-Annotate tests with Allure:
+4. Use Allure annotations for reporting:
 ```bash
 @Feature("New Feature")
 @Story("User Story")
