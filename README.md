@@ -130,8 +130,10 @@ Error messages
 
 ## 🔄 CI/CD Pipeline
 > Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions
+
 ![image alt](https://github.com/OmarElsheikh1/todo-api-testing-framework/blob/ffd110256aa762df6594a1615bb2081b1020d75a/images/deepseek_mermaid_20250703_23e877.png)
 Diagram showing the GitHub Actions workflow that runs automated tests and generates reports on every commit.
+
 ---
 
 ## 🛠️ Development Guide
