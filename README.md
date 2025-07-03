@@ -173,12 +173,20 @@ mvn test -Denv=https://staging.todo-api.com
 ## 🤝 Contributing
 Fork the repository
 
-Create your branch: git checkout -b feature/your-feature
+Create your branch: 
+```bash
+git checkout -b feature/your-feature
+```
 
-Commit your changes: git commit -m "Add new feature"
+Commit your changes: 
+```bash
+git commit -m "Add new feature"
+```
 
-Push the branch: git push origin feature/your-feature
-
+Push the branch: 
+```bash
+git push origin feature/your-feature
+```
 Open a pull request
 
 Please follow the existing code style and include relevant test cases.
