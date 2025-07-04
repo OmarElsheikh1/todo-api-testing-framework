@@ -27,6 +27,8 @@ public class UserTest {
     @Test(description = "Register a new user")
     public void shouldBeAbleToRegister() {
 
+        // I've added the following comments to show how to create a User object in different ways
+
         // Create a User object and set its properties
         // Java object from User class
 //        User user = new User("Omar", "Elsheikh", "omar6@example.com", "Test1234");
